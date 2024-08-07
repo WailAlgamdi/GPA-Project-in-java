@@ -6,16 +6,16 @@ private String symbol;
 private String grade;
 private int hours;
 private int year;
-private int term;
+private int level;
 private boolean isComplete;
 
-Course(String name, String symbol, String grade, int hours, int year, int term,boolean c) {
+Course(String name, String symbol, String grade, int hours, int year, int semester,boolean c) {
 	this.name = name;
 	this.symbol = symbol;
 	this.grade = grade;
 	this.hours = hours;
 	this.year = year;
-	this.term = term;
+	this.level = semester;
 	this.isComplete = c;
 }
 
@@ -43,7 +43,7 @@ public void display() {
 	System.out.println("Grade: "+grade);
 	System.out.println("Hours: "+hours);
 	System.out.println("Take in year: "+year);
-	System.out.println("Take in term: "+term);
+	System.out.println("Take in term: "+level);
 	System.out.println("Total Score: "+this.totalCourseScore());
 	System.out.println("Score I get: "+this.getCourseScore());
 }
@@ -69,8 +69,8 @@ public int getYear() {
 	return year;
 }
 
-public int getTerm() {
-	return term;
+public int getLevel() {
+	return level;
 }
 
 public boolean getIsComplete() {
@@ -101,9 +101,8 @@ public void setHours(int hours) {
 public void setYear(int year) {
 	this.year = year;
 }
-
-public void setTerm(int term) {
-	this.term = term;
+public void setLevel(int semester) {
+	this.level = semester;
 }
 
 }

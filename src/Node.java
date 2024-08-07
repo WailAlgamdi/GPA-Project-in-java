@@ -1,27 +1,33 @@
-import java.io.Serializable;
-public class Node implements Serializable{
+public class Node<T> {
+	private T data;
+	private Node<T> next;
 
-private Course data;
-private Node next;
+	public Node () {
+		data = null;
+		next = null;
+	}
 
-Node(Course data){
-	this.data = data;
-	next = null;
+	public Node (T val) {
+		data = val;
+		next = null;
+	}
+
+	public T getData() {
+		return data;
+	}
+
+	public void setData(T data) {
+		this.data = data;
+	}
+
+	public Node<T> getNext() {
+		return next;
+	}
+
+	public void setNext(Node<T> next) {
+		this.next = next;
+	}
+	
+	
 }
 
-public Course getData() {
-	return data;
-}
-public Node getNext() {
-	return next;
-}
-
-public void setData(Course data) {
-	this.data = data;
-}
-
-public void setNext(Node next) {
-	this.next = next;
-}
-
-}
